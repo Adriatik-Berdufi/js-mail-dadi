@@ -63,10 +63,18 @@ const listaMail = [
     const user = mailToCeck.value;
     for(i = 0; i < listaMail.length ;i++ ){
       if (listaMail[i] === user){
-        conferma.innerHTML = `${user} e consentito l'accesso`;
+        conferma.innerHTML = `
+        <div class="green p-3">${user}</div>
+        <div class="green p-3 fs-1">E consentito l'accesso!!!</div>
+
+              `;
         break;
       }else{
-        conferma.innerHTML = `${user} non e consentito l'accesso`;
+        conferma.innerHTML = `
+        <div class="red p-3">${user}</div>
+        <div class="red p-3 fs-1">Non e consentito l'accesso!!!</div>
+
+              `;
       } 
       
 
