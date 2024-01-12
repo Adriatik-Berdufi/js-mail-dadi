@@ -2,6 +2,8 @@ const diceFace = [1,2,3,4,5,6];
 let userScore = 0;
 let computerScore = 0;
 const play = document.getElementById("play");
+const reset =document.getElementById("reset");
+const score = document.getElementById("score") ;
 // random 2 numeri 
 //Play
 
@@ -9,7 +11,7 @@ const play = document.getElementById("play");
 let partita = 0;
 play.addEventListener('click' ,function(){
 
-    if(partita < 10){
+    if(partita < 3){
         let user = diceFace[Math.floor(Math.random() * 6)];
         console.log(user);
         console.log("VS");
@@ -31,9 +33,20 @@ play.addEventListener('click' ,function(){
         console.log(userScore);
         console.log(computerScore);
         partita ++;
+        console.log(3 - partita);
+        score.innerHTML = ` ${userScore} vs ${computerScore}`;
+       
     }
-
+    
         
 });
+reset.addEventListener('click' ,function(){
+    partita = 0;
+    userScore = 0;
+    computerScore = 0;
+    score.innerHTML = ` ${userScore} vs ${computerScore}`;
+    
 
+    
+});
 
