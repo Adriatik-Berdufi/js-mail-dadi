@@ -4,6 +4,8 @@ let computerScore = 0;
 const play = document.getElementById("play");
 const reset =document.getElementById("reset");
 const score = document.getElementById("score") ;
+const result = document.getElementById("result");
+let startResult = "startResult";
 // random 2 numeri 
 //Play
 
@@ -17,23 +19,37 @@ play.addEventListener('click' ,function(){
         console.log("VS");
         let computer = diceFace[Math.floor(Math.random() * 6)];
         console.log(computer);
+        let results;
+        
+
         // troviamo il piu grande 
         // assegnamo 1 punto al vincitore
         if(user > computer){
-            console.log("You win");
+            
+            results = "win";
             userScore ++;
-            console.log(userScore);
+            result.classList.replace("result", "win");
+
         }else if(user < computer){
-            console.log("You Lose");
+            
+            results = "lose";
             computerScore ++;
+            
         }else{
-            console.log("Drow");
+            results = "drow";
         }
-        console.log("RISULTATO FINALE")
-        console.log(userScore);
-        console.log(computerScore);
+        console.log("startResult:", startResult);
+        console.log("results:", results);
+        result.classList.replace(`${startResult}`, `${results}`);
+
+        startResult = results;
+        console.log(startResult);
+       
+        
         partita ++;
         console.log(3 - partita);
+        
+        result.innerHTML = results;
         score.innerHTML = ` ${userScore} vs ${computerScore}`;
        
     }
@@ -44,6 +60,8 @@ reset.addEventListener('click' ,function(){
     partita = 0;
     userScore = 0;
     computerScore = 0;
+    
+    result.innerHTML = "Risultato";
     score.innerHTML = ` ${userScore} vs ${computerScore}`;
     
 

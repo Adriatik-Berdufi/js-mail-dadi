@@ -20,12 +20,22 @@
     width: 150px;
     border-radius: 10px;
 }
-.result{
-    background-color: rgb(104, 168, 122);
+.startResult{
+    background-color: rgb(104, 153, 168);
 }
 .score{
     background-color: rgb(107, 139, 174);
 }
+
 .reset{
     background-color: rgb(201, 204, 129);
+}
+.lose {
+    background-color: rgb(220, 19, 19);
+}
+.win{
+    background-color: rgb(13, 180, 38);
+}
+.drow{
+    background-color: goldenrod;
 }
