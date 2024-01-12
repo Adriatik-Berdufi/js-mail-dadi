@@ -1,0 +1,31 @@
+.card{
+    min-height: 70vh;
+    min-width: 70vw;
+}
+.dado{
+    font-size: 100px;
+}
+#dado-user{
+    color:rgb(68, 84, 225);
+}
+#dado-computer{
+    color: rgb(180, 32, 32);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+}
+.result{
+    background-color: rgb(104, 168, 122);
+}
+.score{
+    background-color: rgb(107, 139, 174);
+}
+.reset{
+    background-color: rgb(201, 204, 129);
+}

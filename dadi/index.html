@@ -13,9 +13,47 @@
   </head>
 
   <body class="text-center text-bg-secondary m-5">
-      <h1 class="m-5 display-1">FizzBuzz Game</h1>
+      <h1 class="m-5 display-1">Dice Game</h1>
     
-      <div class="row g-3 " id="container">
+      <div class="g-3 d-flex justify-content-center" id="container">
+        <div class="card d-block">
+
+          <h1 class="my-5">Inizia la partita</h1>
+
+          <!--button per iniziare la partita-->
+          <button type="button" class="btn btn-primary">Play</button>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+              <!--dado user-->
+              <div class="m-5">
+                <i class="bi bi-dice-1-fill dado" id="dado-user"></i>
+                <div>User</div>
+              </div>
+              <!--dado Computer-->
+              <div class="m-5">
+                <i class="bi bi-dice-1-fill dado" id="dado-computer"></i>
+                <div>Computer</div>
+              </div>
+          </div>
+
+          <!--Risultato della partita-->
+          <div class="d-flex  justify-content-center align-items-center">
+            <div class="result box">Risultato</div>
+            <div class="score box">Punteggio</div>
+            <div class="reset box">Azzera il punteggio</div>
+
+
+
+          <!-- TODoo da creare un aray in js 
+            1- <i class="bi bi-dice-1-fill"></i>
+            2- <i class="bi bi-dice-2-fill"></i>
+            3- <i class="bi bi-dice-3-fill"></i>
+            4- <i class="bi bi-dice-4-fill"></i>
+            5- <i class="bi bi-dice-5-fill"></i>
+            6- <i class="bi bi-dice-6-fill"></i>
+
+          
+          -->
+        </div>
         
       </div>
             
