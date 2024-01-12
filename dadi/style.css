@@ -5,10 +5,10 @@
 .dado{
     font-size: 100px;
 }
-#dado-user{
+.dado-user{
     color:rgb(68, 84, 225);
 }
-#dado-computer{
+.dado-computer{
     color: rgb(180, 32, 32);
 }
 .box{
