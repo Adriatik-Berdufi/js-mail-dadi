@@ -16,49 +16,61 @@
       <h1 class="m-5 display-1">Dice Game</h1>
     
       <div class="g-3 d-flex justify-content-center" id="container">
-        <div class="card d-block">
+        <div class="card justify-content-center align-items-center">
 
-          <h1 class="my-5">Inizia la partita</h1>
-
-          <!--button per iniziare la partita-->
-          <button type="button" id="play" class="btn btn-primary">Play</button>
-          <div class="d-flex flex-row justify-content-center align-items-center">
-              <!--dado user-->
-              <div class="m-5">
-                <div id="diceUser"></div>
-                <div>User</div>
+          <!--Prima di iniziare la Partita-->
+          <div class="inizio p-5 " id="divInizio">
+            <h1 >Inizia a giocare</h1>
+            <form >
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <label for="nrRound" class="mb-2">inserisci numero di round per parita</label>
+                <input type="number" id="nrRound" value="" class="form-control w-25" placeholder="Nr Round" required>
               </div>
-              <!--dado Computer-->
-              <div class="m-5">
-                <div id="diceComputer"></div>
-                <div>Computer</div>
-              </div>
+              <button type="button" id="start"  class="btn btn-success m-5">Start</button>
+            </form>
           </div>
 
-          <!--Risultato della partita-->
-          <div class="d-flex  justify-content-center align-items-center">
-            <div id="result" class="startResult box">Risultato</div>
-            <div id="score" class="score box">Punteggio</div>
-            <div type="button" id="reset" class="reset box">Azzera il punteggio</div>
+          <!--Partita-->
+          <div class="d-none " id="inizioPartita">
 
+              <!--button per lanciare i dadi-->
+            <button type="button" id="play" class="btn btn-primary">Play</button>
+            <div class="d-flex flex-row justify-content-center align-items-center">
 
+                <!--dado user-->
+                <div class="m-5">
+                  <div id="diceUser"></div>
+                  <div>User</div>
+                </div>
 
-          <!-- TODoo da creare un aray in js 
-            1- <i class="bi bi-dice-1-fill"></i>
-            2- <i class="bi bi-dice-2-fill"></i>
-            3- <i class="bi bi-dice-3-fill"></i>
-            4- <i class="bi bi-dice-4-fill"></i>
-            5- <i class="bi bi-dice-5-fill"></i>
-            6- <i class="bi bi-dice-6-fill"></i>
+                <!--dado Computer-->
+                <div class="m-5">
+                  <div id="diceComputer"></div>
+                  <div>Computer</div>
+                </div>
+                
+            </div>
 
-          
-          -->
+            <!--Risultati-->
+            <div class="d-flex  justify-content-center align-items-center">
+              <div id="result" class="startResult box">Risultato</div>
+              <div id="score" class="score box">Punteggio</div>
+              <button type="button" id="reset" class="reset box ">Azzera il punteggio</button>
+            </div>
+          </div>
+
+          <!-- Fine Partita -->
+          <div class="fine d-flex flex-column justify-content-center align-items-center d-none " id="finePartita"></div>
+
+          <!-- La Bella --> 
+          <div id="laBellaSection" class="d-none d-flex flex-column justify-content-center align-items-center">
+            <div >Fai un ultimo lancio di dadi per emettere il vincitore.</div>
+            <button type="button" id="laBella" class="reset box">La Bella</button>
+          </div>
+      
         </div>
         
       </div>
-            
-      
-    
     
   </body>
  
