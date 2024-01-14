@@ -62,13 +62,20 @@ const listaMail = [
  ceck.addEventListener('click',function(){
     const user = mailToCeck.value;
     for(i = 0; i < listaMail.length ;i++ ){
-      if (listaMail[i] === user){
+      if (listaMail[i] == user){
         conferma.innerHTML = `
-        <div class="green p-3">${user}</div>
-        <div class="green p-3 fs-1">E consentito l'accesso!!!</div>
+        
+        <div class="green p-3 fs-1">
+        <div class="green p-3">Benvenuto!!!</div>
+          <div class="green p-3">${user}</div>
+          <a href="../dadi/index.html">Dice Game</a> 
+        </div>
+        
+        
 
               `;
         break;
+        //document.location.href = url;
       }else{
         conferma.innerHTML = `
         <div class="red p-3">${user}</div>
@@ -78,7 +85,7 @@ const listaMail = [
       } 
       
 
-    }console.log(user);
+    }
     
     
 
